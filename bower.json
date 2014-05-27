@@ -1,0 +1,15 @@
+{
+  "name": "angular-contact",
+  "description": "A simple contact app built with AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/cmgmyr/angular-contact",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-mocks": "~1.2.x",
+    "bootstrap": "~3.1.1",
+    "angular-route": "~1.2.x",
+    "angular-resource": "~1.2.x"
+  }
+}
