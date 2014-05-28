@@ -23,7 +23,9 @@
 <hr />
 <ul>
     <li ng-repeat="contact in contacts | orderBy: sortOrder:direction | filter: query">
-        <h3>{{contact.last_name + ', ' + contact.first_name}}</h3>
-        {{contact.email}}
+        <a href="#/contacts/{{contacts.indexOf(contact)}}">
+            <h3>{{contact.last_name + ', ' + contact.first_name}}</h3>
+            {{contact.email}}
+        </a>
     </li>
 </ul>
