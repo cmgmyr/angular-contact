@@ -1,5 +1,11 @@
-<div ng-model="contacts">
-    <h3>{{contacts[contactId].last_name + ', ' + contacts[contactId].first_name}}</h3>
-    {{contacts[contactId].email}}
+<div class="row">
+    <div class="col-md-4">
+        <div ng-model="contacts">
+            <h3>{{contacts[contactId].last_name + ', ' + contacts[contactId].first_name}}</h3>
+            {{contacts[contactId].email}}
+        </div>
+        <p><a href="#/contacts">Back to search</a></p>
+    </div>
+    <div class="col-md-8">
+    </div>
 </div>
-<p><a href="#/contacts">Back to search</a></p>
