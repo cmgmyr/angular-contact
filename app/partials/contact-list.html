@@ -1,0 +1,29 @@
+<div class="search">
+    <h1>Contact List</h1>
+    <label>Search:</label>
+    <input ng-model="query" placeholder="Search for contacts" autofocus>
+
+    <label>by:
+        <select ng-model="sortOrder">
+            <option value="last_name">Last Name</option>
+            <option value="first_name">First Name</option>
+            <option value="email">Email</option>
+        </select>
+    </label>
+
+    <label>
+        <input type="radio" name="direction" ng-model="direction" checked>
+        ascending
+    </label>
+    <label>
+        <input type="radio" name="direction" ng-model="direction" value="reverse">
+        descending
+    </label>
+</div>
+<hr />
+<ul>
+    <li ng-repeat="contact in contacts | orderBy: sortOrder:direction | filter: query">
+        <h3>{{contact.last_name + ', ' + contact.first_name}}</h3>
+        {{contact.email}}
+    </li>
+</ul>

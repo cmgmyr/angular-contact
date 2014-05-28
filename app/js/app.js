@@ -1,5 +1,25 @@
-var app = angular.module('contactApp', []);
+'use strict';
 
-app.controller('nameCtrl', function($scope) {
-    $scope.name = 'Chris';
-});
+var app = angular.module('contactApp', [
+    'ngRoute',
+
+    'contactControllers',
+    'contactServices'
+]);
+
+app.config(['$routeProvider',
+    function($roueProvider) {
+        $roueProvider.
+            when('/contacts', {
+                templateUrl: 'partials/contact-list.html',
+                controller: 'ContactListCtrl'
+            }).
+            when('/contacts/:contactId', {
+                templateUrl: 'partials/contact-detail.html',
+                controller: 'ContactDetailCtrl'
+            }).
+            otherwise({
+                redirectTo: '/contacts'
+            });
+    }
+]);
