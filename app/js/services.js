@@ -12,5 +12,17 @@ contactServices.service('Contact', ['$http', function($http) {
 
     this.getContact = function(id) {
         return $http.get(urlBase + '/' + id);
-    }
+    };
+
+    this.insertContact = function(contact) {
+        return $http.post(urlBase, contact);
+    };
+
+    this.updateContact = function(contact) {
+        return $http.put(urlBase + '/' + contact.id, contact);
+    };
+
+    this.deleteContact = function(id) {
+        return $http.delete(urlBase + '/' + id);
+    };
 }]);
