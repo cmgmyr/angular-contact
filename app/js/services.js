@@ -4,9 +4,13 @@ var contactServices = angular.module('contactServices', []);
 
 contactServices.service('Contact', ['$http', function($http) {
 
-    var urlBase = '/app/data/contacts.json';
+    var urlBase = 'http://angular-contact-api.dev/api/contacts';
 
     this.getContacts = function() {
         return $http.get(urlBase);
     };
+
+    this.getContact = function(id) {
+        return $http.get(urlBase + '/' + id);
+    }
 }]);

@@ -2,15 +2,15 @@
 
 contactControllers.controller('ContactDetailCtrl', ['$scope', '$routeParams', 'Contact', function($scope, $routeParams, Contact) {
 
-    $scope.contacts = {};
+    $scope.contact = {};
     $scope.contactId = $routeParams.contactId;
 
-    getContacts();
+    getContact();
 
-    function getContacts() {
-        Contact.getContacts()
+    function getContact() {
+        Contact.getContact($scope.contactId)
             .success(function (data) {
-                $scope.contacts = data;
+                $scope.contact = data;
             });
     }
 }]);
