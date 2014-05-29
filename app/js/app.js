@@ -4,7 +4,8 @@ var app = angular.module('contactApp', [
     'ngRoute',
 
     'contactControllers',
-    'contactServices'
+    'contactServices',
+    'contactDirectives'
 ]);
 
 app.config(['$routeProvider',
