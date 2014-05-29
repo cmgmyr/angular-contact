@@ -15,6 +15,10 @@ app.config(['$routeProvider',
                 templateUrl: 'partials/contact-list.html',
                 controller: 'ContactListCtrl'
             }).
+            when('/contacts/create', {
+                templateUrl: 'partials/contact-create.html',
+                controller: 'ContactCreateCtrl'
+            }).
             when('/contacts/:contactId', {
                 templateUrl: 'partials/contact-detail.html',
                 controller: 'ContactDetailCtrl'
