@@ -4,6 +4,7 @@ contactControllers.controller('ContactListCtrl', ['$scope', 'Contact', function(
 
     $scope.contacts = {};
     $scope.sortOrder = 'last_name';
+    $scope.direction = '';
 
     getContacts();
 
@@ -13,4 +14,8 @@ contactControllers.controller('ContactListCtrl', ['$scope', 'Contact', function(
                 $scope.contacts = data;
             });
     }
+
+    $scope.changeDirection = function(direction) {
+        $scope.direction = direction;
+    };
 }]);

@@ -1,42 +1,38 @@
 <div class="row">
     <div class="col-md-4">
         <div class="search">
-            <h1>Contact List</h1>
-            <form role="form">
+            <h1>
+                Contact List
+                <a href="#/contacts/create" class="btn btn-success pull-right">+</a>
+            </h1>
+            <form role="form" class="clearfix">
                 <div class="form-group">
-                    <label>Search:</label>
-                    <input ng-model="query" placeholder="Search for contacts" autofocus>
+                    <label class="control-label hidden-xs">Search:</label>
+                    <input ng-model="query" placeholder="Search for contacts" class="form-control" autofocus>
                 </div>
 
                 <div class="form-group">
-                    <label>Sort by:
-                        <select ng-model="sortOrder">
-                            <option value="last_name">Last Name</option>
-                            <option value="first_name">First Name</option>
-                            <option value="email">Email</option>
-                        </select>
-                    </label>
-
-                    <label>
-                        <input type="radio" name="direction" ng-model="direction" checked>
-                        asc
-                    </label>
-                    <label>
-                        <input type="radio" name="direction" ng-model="direction" value="reverse">
-                        desc
-                    </label>
+                    <label class="control-label hidden-xs">Sort by:</label>
+                    <select ng-model="sortOrder" class="form-control">
+                        <option value="last_name">Last Name</option>
+                        <option value="first_name">First Name</option>
+                        <option value="email">Email</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="btn-group">
+                        <button type="button" ng-class="(direction == '' ? 'btn btn-info' : 'btn btn-default')" ng-click="changeDirection('')">Asc</button>
+                        <button type="button" ng-class="(direction == 'reverse' ? 'btn btn-info' : 'btn btn-default')" ng-click="changeDirection('reverse')">Desc</button>
+                    </div>
                 </div>
             </form>
-            <a href="#/contacts/create" class="btn btn-primary">Add Contact</a>
         </div>
     </div>
     <div class="col-md-8">
-        <ul id="contact-list">
-            <li ng-repeat="contact in contacts | orderBy: sortOrder:direction | filter: query">
-                <a href="#/contacts/{{contact.id}}">
-                    {{contact.last_name + ', ' + contact.first_name}}
-                </a>
-            </li>
-        </ul>
+        <div id="contact-list" class="list-group">
+            <a ng-repeat="contact in contacts | orderBy: sortOrder:direction | filter: query" href="#/contacts/{{contact.id}}" class="list-group-item">
+                {{contact.last_name + ', ' + contact.first_name}}
+            </a>
+        </div>
     </div>
 </div>

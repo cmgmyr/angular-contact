@@ -1,14 +1,14 @@
 'use strict';
 
-var app = angular.module('contactApp', [
+angular.module('contactApp', [
     'ngRoute',
 
     'contactControllers',
     'contactServices',
     'contactDirectives'
-]);
+])
 
-app.config(['$routeProvider',
+.config(['$routeProvider',
     function($roueProvider) {
         $roueProvider.
             when('/contacts', {

@@ -10,12 +10,11 @@
         <p><a href="#/contacts">&lt; Back to search</a></p>
     </div>
     <div class="col-md-8">
-        <form id="create-form" name="create-form" role="form" class="form-horizontal">
+        <form id="create-form" name="create-form" role="form">
             <div ng-include="'partials/contact-form.html'"></div>
             <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button class="btn btn-primary" ng-click="insertContact()">Save</button>
-                </div>
+                <button class="btn btn-primary" ng-click="insertContact()">Save</button>
+                <a href="#/contacts" class="btn btn-default pull-right">Cancel</a>
             </div>
         </form>
     </div>
