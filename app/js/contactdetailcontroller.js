@@ -1,6 +1,6 @@
 'use strict';
 
-contactControllers.controller('ContactDetailCtrl', ['$scope', '$routeParams', 'Contact', function($scope, $routeParams, Contact) {
+contactControllers.controller('ContactDetailCtrl', ['$scope', '$routeParams', '$location', 'Contact', function($scope, $routeParams, $location, Contact) {
 
     $scope.contact = {};
 
@@ -13,10 +13,21 @@ contactControllers.controller('ContactDetailCtrl', ['$scope', '$routeParams', 'C
             });
     }
 
-    $scope.updateContact = function(id) {
-        Contact.updateContact(contact)
+    $scope.updateContact = function() {
+        Contact.updateContact($scope.contact)
             .success(function(data) {
                 $scope.contact = data;
+                alert('Contact Saved!');
+            })
+            .error(function() {
+                alert('Unable to update contact!');
             });
-    }
+    };
+
+    $scope.deleteContact = function() {
+        Contact.deleteContact($routeParams.contactId)
+            .success(function() {
+                $location.path("/contacts");
+            });
+    };
 }]);
