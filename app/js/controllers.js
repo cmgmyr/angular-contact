@@ -1,3 +1,3 @@
 'use strict';
 
-var contactControllers = angular.module('contactControllers', []);
+angular.module('contactControllers', []);

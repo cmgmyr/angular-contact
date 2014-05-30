@@ -1,6 +1,6 @@
 'use strict';
 
-contactControllers.controller('ContactDetailCtrl', ['$scope', '$routeParams', '$location', 'Contact', function($scope, $routeParams, $location, Contact) {
+angular.module('contactControllers').controller('ContactDetailCtrl', ['$scope', '$routeParams', '$location', 'Contact', function($scope, $routeParams, $location, Contact) {
 
     $scope.contact = {};
 

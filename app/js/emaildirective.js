@@ -1,6 +1,6 @@
 'use strict';
 
-contactDirectives.directive('contactEmail', function() {
+angular.module('contactDirectives').directive('contactEmail', function() {
     return {
         restrict: 'E',
         scope: {

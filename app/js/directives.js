@@ -1,3 +1,3 @@
 'use strict';
 
-var contactDirectives = angular.module('contactDirectives', []);
+angular.module('contactDirectives', []);

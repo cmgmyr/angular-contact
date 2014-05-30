@@ -1,8 +1,8 @@
 'use strict';
 
-var contactServices = angular.module('contactServices', []);
+angular.module('contactServices', [])
 
-contactServices.service('Contact', ['$http', function($http) {
+.service('Contact', ['$http', function($http) {
 
     var urlBase = 'http://angular-contact-api.dev/api/contacts';
 

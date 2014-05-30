@@ -1,6 +1,6 @@
 'use strict';
 
-contactControllers.controller('ContactListCtrl', ['$scope', 'Contact', function($scope, Contact) {
+angular.module('contactControllers').controller('ContactListCtrl', ['$scope', 'Contact', function($scope, Contact) {
 
     $scope.contacts = {};
     $scope.sortOrder = 'last_name';
