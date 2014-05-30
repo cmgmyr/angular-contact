@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="col-md-8">
-        <ul id="contact-list" class="list-group" ng-repeat="contactGroup in contacts">
+        <ul id="contact-list" class="list-group" ng-repeat="contactGroup in contacts" ng-show="showContacts">
             <li class="list-group-item"><h5>{{contactGroup.title}}</h5></li>
             <li class="list-group-item">
                 <div class="list-group">
@@ -40,5 +40,6 @@
                 </div>
             </li>
         </ul>
+        <div id="loading" ng-hide="showContacts"><img src="img/loader.gif"></div>
     </div>
 </div>
