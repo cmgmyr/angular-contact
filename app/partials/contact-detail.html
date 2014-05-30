@@ -6,13 +6,13 @@
             <div>Phone: {{contact.phone}}</div>
         </div>
         <p>&nbsp;</p>
-        <p><a href="#/contacts">&lt; Back to search</a></p>
+        <p><a href="#/contacts" class="btn btn-primary btn-xs">&lt; Back to search</a></p>
     </div>
     <div class="col-md-8">
         <form id="edit-form" name="edit-form" role="form">
             <div ng-include="'partials/contact-form.html'"></div>
             <div class="form-group">
-                <button class="btn btn-primary" ng-click="updateContact()">Save</button>
+                <button class="btn btn-success" ng-click="updateContact()">Save</button>
                 <button class="btn btn-danger pull-right" ng-click="deleteContact()">Delete</button>
             </div>
         </form>
