@@ -29,10 +29,16 @@
         </div>
     </div>
     <div class="col-md-8">
-        <div id="contact-list" class="list-group">
-            <a ng-repeat="contact in contacts" href="#/contacts/{{contact.id}}" class="list-group-item">
-                {{contact.last_name + ', ' + contact.first_name}}
-            </a>
-        </div>
+        <ul id="contact-list" class="list-group" ng-repeat="contactGroup in contacts">
+            <li class="list-group-item"><h5>{{contactGroup.title}}</h5></li>
+            <li class="list-group-item">
+                <div class="list-group">
+                    <a ng-repeat="contact in contactGroup.contacts" href="#/contacts/{{contact.id}}" class="list-group-item">
+                        <span ng-show="sortOrder == 'email'">{{contact.email}} <small>({{contact.last_name + ', ' + contact.first_name}})</small></span>
+                        <span ng-show="sortOrder != 'email'">{{contact.last_name + ', ' + contact.first_name}}</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>

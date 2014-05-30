@@ -21,7 +21,8 @@ angular.module('contactControllers').controller('ContactListCtrl', ['$scope', 'C
         getContacts();
     };
 
-    $scope.$watchCollection(['sortOrder', 'direction'], getContacts);
+    $scope.$watch('sortOrder', getContacts);
+    $scope.$watch('direction', getContacts);
 
     $scope.$watch('query', function(newValue) {
         if (newValue.length >= 3 || newValue.length == 0) {
