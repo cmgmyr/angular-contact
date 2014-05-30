@@ -6,8 +6,13 @@ contactServices.service('Contact', ['$http', function($http) {
 
     var urlBase = 'http://angular-contact-api.dev/api/contacts';
 
-    this.getContacts = function() {
-        return $http.get(urlBase);
+    this.getContacts = function(sortBy, direction, query) {
+        if (direction == '') {
+            direction = 'asc';
+        } else {
+            direction = 'desc';
+        }
+        return $http.get(urlBase + '?sortBy=' + sortBy + '&direction=' + direction + '&query=' + query);
     };
 
     this.getContact = function(id) {
