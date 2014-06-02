@@ -1,0 +1,511 @@
+{
+    "project": {
+        "name": "angular-contact",
+        "description": "A simple contact app built with AngularJS",
+        "version": "0.0.1"
+    },
+    "files": {
+        "app/js/app.js": {
+            "name": "app/js/app.js",
+            "modules": {
+                "contactApp": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/js/contactcreatecontroller.js": {
+            "name": "app/js/contactcreatecontroller.js",
+            "modules": {
+                "contactControllers": 1
+            },
+            "classes": {
+                "ContactCreateCtrl": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/js/contactdetailcontroller.js": {
+            "name": "app/js/contactdetailcontroller.js",
+            "modules": {},
+            "classes": {
+                "ContactDetailCtrl": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/js/contactlistcontroller.js": {
+            "name": "app/js/contactlistcontroller.js",
+            "modules": {},
+            "classes": {
+                "ContactListCtrl": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/js/controllers.js": {
+            "name": "app/js/controllers.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/js/directives.js": {
+            "name": "app/js/directives.js",
+            "modules": {
+                "contactDirectives": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/js/emaildirective.js": {
+            "name": "app/js/emaildirective.js",
+            "modules": {},
+            "classes": {
+                "contactEmail": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/js/services.js": {
+            "name": "app/js/services.js",
+            "modules": {
+                "contactServices": 1
+            },
+            "classes": {
+                "Contact": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "contactApp": {
+            "name": "contactApp",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "app/js/app.js",
+            "line": 3,
+            "description": "The contactApp module is the application core module"
+        },
+        "contactControllers": {
+            "name": "contactControllers",
+            "submodules": {},
+            "classes": {
+                "ContactCreateCtrl": 1,
+                "ContactDetailCtrl": 1,
+                "ContactListCtrl": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "app/js/contactlistcontroller.js",
+            "line": 3,
+            "description": "Initializes ContactCreateCtrl which will handle\nall functionality to create a new contact"
+        },
+        "contactDirectives": {
+            "name": "contactDirectives",
+            "submodules": {},
+            "classes": {
+                "contactEmail": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "app/js/emaildirective.js",
+            "line": 3,
+            "description": "The contactDirectives module controls all app directives"
+        },
+        "contactServices": {
+            "name": "contactServices",
+            "submodules": {},
+            "classes": {
+                "Contact": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "app/js/services.js",
+            "line": 10,
+            "description": "The contactServices module controls all app services"
+        }
+    },
+    "classes": {
+        "ContactCreateCtrl": {
+            "name": "ContactCreateCtrl",
+            "shortname": "ContactCreateCtrl",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "contactControllers",
+            "namespace": "",
+            "file": "app/js/contactcreatecontroller.js",
+            "line": 3,
+            "description": "Initializes ContactCreateCtrl which will handle\nall functionality to create a new contact",
+            "is_constructor": 1
+        },
+        "ContactDetailCtrl": {
+            "name": "ContactDetailCtrl",
+            "shortname": "ContactDetailCtrl",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "contactControllers",
+            "namespace": "",
+            "file": "app/js/contactdetailcontroller.js",
+            "line": 3,
+            "description": "Initializes ContactDetailCtrl which will handle all\nfunctionality to show, update, and delete a contact",
+            "is_constructor": 1
+        },
+        "ContactListCtrl": {
+            "name": "ContactListCtrl",
+            "shortname": "ContactListCtrl",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "contactControllers",
+            "namespace": "",
+            "file": "app/js/contactlistcontroller.js",
+            "line": 3,
+            "description": "Initializes ContactListCtrl which will handle all\nfunctionality to show, sort, and search contacts",
+            "is_constructor": 1
+        },
+        "contactEmail": {
+            "name": "contactEmail",
+            "shortname": "contactEmail",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "contactDirectives",
+            "namespace": "",
+            "file": "app/js/emaildirective.js",
+            "line": 3,
+            "description": "Initializes contactEmail which will handle all\nformatting of email addresses",
+            "is_constructor": 1
+        },
+        "Contact": {
+            "name": "Contact",
+            "shortname": "Contact",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "contactServices",
+            "namespace": "",
+            "file": "app/js/services.js",
+            "line": 10,
+            "description": "Initializes Contact service which will handle getting, inserting,\nupdating, and deleting contacts in the data source",
+            "is_constructor": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "app/js/contactcreatecontroller.js",
+            "line": 13,
+            "description": "Contact object to be possibly persisted",
+            "itemtype": "property",
+            "name": "contact",
+            "type": "object",
+            "default": "{}",
+            "class": "ContactCreateCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactcreatecontroller.js",
+            "line": 22,
+            "description": "Attempts to insert a new contact through the Contact service",
+            "itemtype": "method",
+            "name": "insertContact",
+            "class": "ContactCreateCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactdetailcontroller.js",
+            "line": 13,
+            "description": "Contact object to be possibly persisted",
+            "itemtype": "property",
+            "name": "contact",
+            "type": "object",
+            "default": "{}",
+            "class": "ContactDetailCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactdetailcontroller.js",
+            "line": 24,
+            "description": "Uses the Contact service in order to grab specific contact object",
+            "itemtype": "method",
+            "name": "getContact",
+            "class": "ContactDetailCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactdetailcontroller.js",
+            "line": 36,
+            "description": "Uses the Contact service in order to persist the contact's data",
+            "itemtype": "method",
+            "name": "updateContact",
+            "class": "ContactDetailCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactdetailcontroller.js",
+            "line": 52,
+            "description": "Uses the Contact service in order to remove the contact from the data source",
+            "itemtype": "method",
+            "name": "deleteContact",
+            "class": "ContactDetailCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactlistcontroller.js",
+            "line": 13,
+            "description": "Show or hide the contact list data. If hidden, show the loader image",
+            "itemtype": "property",
+            "name": "showContacts",
+            "type": "boolean",
+            "default": "false",
+            "class": "ContactListCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactlistcontroller.js",
+            "line": 22,
+            "description": "Main scope object that holds all contact data",
+            "itemtype": "property",
+            "name": "contacts",
+            "type": "object",
+            "default": "{}",
+            "class": "ContactListCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactlistcontroller.js",
+            "line": 31,
+            "description": "Provides the property that the contacts will be sorted by",
+            "itemtype": "property",
+            "name": "sortOrder",
+            "type": "string",
+            "default": "'last_name'",
+            "class": "ContactListCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactlistcontroller.js",
+            "line": 40,
+            "description": "Provides the direction that the contacts will be sorted by",
+            "itemtype": "property",
+            "name": "direction",
+            "type": "string",
+            "default": "''",
+            "class": "ContactListCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactlistcontroller.js",
+            "line": 49,
+            "description": "Provides the text query that the contacts will be searched by",
+            "itemtype": "property",
+            "name": "query",
+            "type": "string",
+            "default": "''",
+            "class": "ContactListCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactlistcontroller.js",
+            "line": 60,
+            "description": "Uses the Contact service in order to grab all contacts in data source",
+            "itemtype": "method",
+            "name": "getContacts",
+            "class": "ContactListCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactlistcontroller.js",
+            "line": 74,
+            "description": "Changes the direction of the sort order",
+            "itemtype": "method",
+            "name": "changeDirection",
+            "class": "ContactListCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactlistcontroller.js",
+            "line": 84,
+            "description": "Watches the sortOrder property, then runs getContacts if changed",
+            "class": "ContactListCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactlistcontroller.js",
+            "line": 89,
+            "description": "Watches the direction property, then runs getContacts if changed",
+            "class": "ContactListCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/contactlistcontroller.js",
+            "line": 94,
+            "description": "Watches the query property, then runs getContacts if string length\nis greater than or equal to 3, or equal to 0",
+            "class": "ContactListCtrl",
+            "module": "contactControllers"
+        },
+        {
+            "file": "app/js/services.js",
+            "line": 20,
+            "description": "The base URL of the API server to call",
+            "itemtype": "property",
+            "name": "urlBase",
+            "type": "string",
+            "default": "'http://angular-contact-api.dev/api/contacts'",
+            "class": "Contact",
+            "module": "contactServices"
+        },
+        {
+            "file": "app/js/services.js",
+            "line": 29,
+            "description": "Gets all contacts from data source",
+            "itemtype": "method",
+            "name": "getContacts",
+            "params": [
+                {
+                    "name": "sortBy",
+                    "description": "string"
+                },
+                {
+                    "name": "direction",
+                    "description": "string"
+                },
+                {
+                    "name": "query",
+                    "description": "string"
+                }
+            ],
+            "return": {
+                "description": "HttpPromise"
+            },
+            "class": "Contact",
+            "module": "contactServices"
+        },
+        {
+            "file": "app/js/services.js",
+            "line": 47,
+            "description": "Gets a specific contact from data source by id",
+            "itemtype": "method",
+            "name": "getContact",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "integer"
+                }
+            ],
+            "return": {
+                "description": "HttpPromise"
+            },
+            "class": "Contact",
+            "module": "contactServices"
+        },
+        {
+            "file": "app/js/services.js",
+            "line": 58,
+            "description": "Inserts a contact object into data source",
+            "itemtype": "method",
+            "name": "insertContact",
+            "params": [
+                {
+                    "name": "contact",
+                    "description": "object"
+                }
+            ],
+            "return": {
+                "description": "HttpPromise"
+            },
+            "class": "Contact",
+            "module": "contactServices"
+        },
+        {
+            "file": "app/js/services.js",
+            "line": 69,
+            "description": "Updates a contact object in data source",
+            "itemtype": "method",
+            "name": "updateContact",
+            "params": [
+                {
+                    "name": "contact",
+                    "description": "object"
+                }
+            ],
+            "return": {
+                "description": "HttpPromise"
+            },
+            "class": "Contact",
+            "module": "contactServices"
+        },
+        {
+            "file": "app/js/services.js",
+            "line": 80,
+            "description": "Deletes a contact from data source",
+            "itemtype": "method",
+            "name": "deleteContact",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "integer"
+                }
+            ],
+            "return": {
+                "description": "HttpPromise"
+            },
+            "class": "Contact",
+            "module": "contactServices"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/js/services.js:29"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/js/services.js:47"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/js/services.js:58"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/js/services.js:69"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " app/js/services.js:80"
+        },
+        {
+            "message": "Missing item type\nWatches the sortOrder property, then runs getContacts if changed",
+            "line": " app/js/contactlistcontroller.js:84"
+        },
+        {
+            "message": "Missing item type\nWatches the direction property, then runs getContacts if changed",
+            "line": " app/js/contactlistcontroller.js:89"
+        },
+        {
+            "message": "Missing item type\nWatches the query property, then runs getContacts if string length\nis greater than or equal to 3, or equal to 0",
+            "line": " app/js/contactlistcontroller.js:94"
+        }
+    ]
+}

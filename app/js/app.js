@@ -1,5 +1,10 @@
 'use strict';
 
+/**
+ * The contactApp module is the application core module
+ *
+ * @module contactApp
+ */
 angular.module('contactApp', [
     'ngRoute',
 
@@ -8,6 +13,11 @@ angular.module('contactApp', [
     'contactDirectives'
 ])
 
+/**
+ * Configuration block for the contactApp module
+ *
+ * @module contactApp
+ */
 .config(['$routeProvider',
     function($roueProvider) {
         $roueProvider.
