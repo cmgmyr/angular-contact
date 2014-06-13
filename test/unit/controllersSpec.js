@@ -2,14 +2,16 @@
 
 /* jasmine specs for controllers go here */
 
-describe('contactApp controllers', function() {
-    var module;
+describe('contactApp controllers module', function() {
+    'use strict';
+
+    var app;
 
     beforeEach(function() {
-        module = angular.module('ContactApp');
+        app = angular.module('contactControllers');
     });
 
     it('should be defined', function() {
-        expect(module).toBeDefined();
+        expect(app).toBeDefined();
     });
 });

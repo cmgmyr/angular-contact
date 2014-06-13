@@ -24,6 +24,12 @@ module.exports = function (grunt) {
                 }
             }
         },
+        karma: {
+            unit: {
+                configFile: 'test/karma.conf.js',
+                singleRun: true
+            }
+        },
         yuidoc: {
             app: {
                 name: 'angular-contact',
@@ -41,8 +47,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-yuidoc');
+    grunt.loadNpmTasks('grunt-karma');
 
     // Task definition
+    grunt.registerTask('test', ['karma']);
     grunt.registerTask('docs', 'yuidoc');
     grunt.registerTask('init', ['less']);
     grunt.registerTask('default', ['watch']);

@@ -1,24 +1,28 @@
 {
-  "version": "0.0.1",
-  "private": true,
-  "name": "angular-contact",
-  "description": "A simple contact app built with AngularJS",
-  "repository": "https://github.com/cmgmyr/angular-contact",
-  "license": "MIT",
-  "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-less": "^0.11.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-contrib-yuidoc": "^0.5.2",
-    "http-server": "^0.6.1",
-    "karma": "~0.10",
-    "shelljs": "^0.2.6"
-  },
-  "scripts": {
-    "prestart": "npm install",
-    "start": "http-server -p 8000",
-    "pretest": "npm install",
-    "test": "karma start test/karma.conf.js",
-    "test-single-run": "karma start test/karma.conf.js  --single-run"
-  }
+    "version": "0.0.1",
+    "private": true,
+    "name": "angular-contact",
+    "description": "A simple contact app built with AngularJS",
+    "repository": "https://github.com/cmgmyr/angular-contact",
+    "license": "MIT",
+    "devDependencies": {
+        "grunt": "~0.4.5",
+        "grunt-contrib-less": "^0.11.0",
+        "grunt-contrib-watch": "^0.6.1",
+        "grunt-contrib-yuidoc": "^0.5.2",
+        "http-server": "^0.6.1",
+        "karma": "~0.12.16",
+        "shelljs": "^0.2.6",
+        "grunt-karma": "~0.8.3",
+        "karma-jasmine": "~0.1.5",
+        "karma-phantomjs-launcher": "~0.1.4",
+        "karma-chrome-launcher": "~0.1.4"
+    },
+    "scripts": {
+        "prestart": "npm install",
+        "start": "http-server -p 8000",
+        "pretest": "npm install",
+        "test": "karma start test/karma.conf.js",
+        "test-single-run": "karma start test/karma.conf.js  --single-run"
+    }
 }
